@@ -1,0 +1,60 @@
+.custom-navbar {
+    background-color: white !important;
+    margin-left: 20px;
+    margin-right: 20px !important;
+    margin-top: 0% !important;
+}
+
+.custom-cont {
+    margin-top: 0% !important;
+
+    background-color: white !important;
+}
+
+#my_profile {
+    margin-top: 45px;
+    margin-left: 60px;
+    margin-right: 55px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+.card {
+
+    margin-left: 75px;
+    margin-top: 10px !important;
+    border-radius: 20px !important;
+}
+
+.card-img-top {
+    border-radius: 20px !important;
+    height: 10rem;
+    margin: none;
+}
+
+.card-body {
+    border-radius: 20px !important;
+    background-color: beige;
+}
+
+#buttonadd {
+    background-color: beige;
+    border-radius: 45px;
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+    margin-left: 80px
+}
+input{
+    text-align: center;
+    
+}
+label{
+    margin-left: 20px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
