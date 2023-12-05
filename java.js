@@ -278,6 +278,7 @@ function addpurchase() {
 function limpar() {
     numero_de_produtos = 0
     total = 0
+    array_botao_presionado =[]
     console.log(total)
     var escrevr = document.getElementById("total")
     escrevr.textContent = total
