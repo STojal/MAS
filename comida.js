@@ -5,7 +5,7 @@ var alimentos = {
 
         "Nome": "ração",
         "Preço": 4.00,
-        "Imagem": "Racao_cao.jpg"
+        "Imagem": "Racao cao.jpg"
     },
     {
         "Nome": "biscoitos",
