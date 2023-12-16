@@ -1,4 +1,4 @@
-// My profile 
+// My pets
 $("#buttonadd").click(function () {
     $("#content-new-animal").toggle();
 })

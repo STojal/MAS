@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+header, nav, footer {
+  background: white;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.wrapper .left {
+    width: 15%;
+    padding: 30px 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to right, #01a9ac, #01dbdf);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wrapper .left img {
+    border-radius: 50%;
+    width: 100%; /* Make the image take the full width of the parent */
+    max-width: 150px; /* Set a maximum width for the image */
+    height: auto; /* Maintain the aspect ratio */
+    margin-bottom: 10px;
+  }
+
+.wrapper .right {
+  width: 85%;
+  background: #fff;
+  padding: 30px 25px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 10px; /* Add a bit of margin for better aesthetics */
+}
+
+/* Additional styling for a cleaner look */
+h4, p {
+  margin: 0;
+}
+
+.info_data .data, .projects_data .data {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.social_media ul {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+.social_media ul li {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(to right, #01a9ac, #01dbdf);
+  margin-right: 10px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 45px;
+}
+
+.social_media ul li a {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+}
+
+/* Additional styling for the card section */
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.card {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+#buttonadd {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.container {
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+#content-new-animal {
+  display: none;
+}
+
+/* Additional styling for the footer */
+.footer {
+  position: sticky;
+  bottom: 0;
+}
+#pets {
+    display: inline-block;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 0px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
