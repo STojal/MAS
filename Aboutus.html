@@ -2,22 +2,34 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>My Profile</title>
+    <title>Sobre nós</title>
     <link rel="stylesheet" href="CSS.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        .card-img {
-            border-radius: 20px !important;
-            height: 250px;
-            margin: none;
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text {
+            text-align: left;
+            width: 100%;
+            max-width: 1100px;
+        }
+        .container img {
+            margin-top: 35px;
+            margin-bottom: 35px;
+        }
+        .text ol li::marker {
+            font-weight: bold;
         }
     </style>
 
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -30,7 +42,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Super Pets</a>
+                        <a class="nav-link" aria-current="page" href="#">Super Pets</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -41,7 +53,7 @@
                         <a class="nav-link" href="Comida.html" style="margin-right: 30px;">Comida</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Aboutus.html" style="margin-right: 30px;">Sobre nós</a>
+                        <a class="nav-link active" href="Aboutus.html" style="margin-right: 30px;">Sobre nós</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="MyProfile.html" style="margin-right: 30px;">
@@ -52,49 +64,21 @@
             </div>
         </div>
     </nav>
-
-    <div>
-        <h3 id="my_profile">Os nossos especialistas </h3>
-    </div>
-    <div class="row">
-        <div class="card col-3">
-            <img src="DiogoSilva.jpg" class="card-img" alt="Diogo Silva">
-            <div class="card-body">
-                <h5 class="card-title">Diogo Silva</h5>
-                <p class="card-text">Anestesista</p>
-            </div>
-        </div>
-        <div class="card col-3">
-            <img src="Ana Martins.jpg" class="card-img" alt="Ana Martins">
-            <div class="card-body">
-                <h5 class="card-title">Ana Martins</h5>
-                <p class="card-text">Cirurgião Veterinário</p>
-            </div>
-        </div>
-        <div class="card col-3">
-            <img src="Pedro Pimenta.jpg" class="card-img" alt="Pedro Pimenta">
-            <div class="card-body">
-                <h5 class="card-title">Pedro Pimenta</h5>
-                <p class="card-text">Clínico Geral Veterinário </p>
-            </div>
+    <div class="container">
+        <h3>Sobre nós</h3>
+        <img src="vetwithpet.jpg" alt="Veterinário com cão" style="width: 100%; max-width: 1100px;">
+        <div class="text">
+            <h5><b>Bem-vindo ao nosso serviço de subscrição online, dedicado ao cuidado do seu animal de estimação!</b></h5>
+            <h6>O que oferecemos:</h6>
+            <ol>
+                <li><b>Planos de subscrição diversos:</b> Escolha o plano ideal, adaptado às necessidades do seu fiel companheiro.</li>
+                <li><b>Entrega de comida de alta qualidade:</b> Desfrute da conveniência da entrega de comida saudável e equilibrada, desenvolvida tendo em conta as características individuais do seu animal de estimação.</li>
+                <li><b>Acompanhamento clínico completo:</b> Mantemos registos médicos, elaboramos planos de vacinação e proporcionamos acesso a veterinários qualificados.</li>
+            </ol>
+            <p>Junte-se à nossa comunidade de cuidado, onde cada momento com o seu animal de estimação se torna especial. Vamos criar juntos condições ideais para uma vida feliz e longa para ele.</p>
+            <a href="vets.html">Nossos especialistas</a>
         </div>
     </div>
-
-    <!---  footer e botao para alterar fundo !-->
-
-    <footer class="footer mt-auto py-3 bg-body-tertiary">
-        <div class="container">
-            <span class="text-body-secondary">Place sticky footer content here.</span>
-
-        </div>
-
-
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-                integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-                crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-                crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
