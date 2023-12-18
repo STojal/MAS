@@ -5,22 +5,22 @@ var alimentos = {
 
         "Nome": "ração",
         "Preço": 4.00,
-        "Imagem": "Racao cao.jpg"
+        "Imagem": "images/Racao cao.jpg"
     },
     {
         "Nome": "biscoitos",
         "Preço": 4.99,
-        "Imagem": "exemplo.jpg"
+        "Imagem": "images/BiscoitosCao.jpg"
     },
     {
         "Nome": "lata",
         "Preço": 5.50,
-        "Imagem": "exemplo.jpg"
+        "Imagem": "images/LataCao.jpg"
     },
     {
         "Nome": "Ossos",
         "Preço": 6.50,
-        "Imagem": "exemplo.jpg"
+        "Imagem": "images/OssosCao.jpg"
     }
 
 
@@ -30,17 +30,17 @@ var alimentos = {
 
         "Nome": "ração",
         "Preço": 4.00,
-        "Imagem": "Racao_cao.jpg"
+        "Imagem": "images/racaoGato.jpg"
     },
     {
         "Nome": "biscoitos",
         "Preço": 4.99,
-        "Imagem": "exemplo.jpg"
+        "Imagem": "images/BiscoitosGatos.jpg"
     },
     {
         "Nome": "lata",
         "Preço": 5.50,
-        "Imagem": "exemplo.jpg"
+        "Imagem": "images/LataGato.jpg"
     }
 
 
@@ -64,7 +64,7 @@ function loadanimals() {
             var Preço = alimento.Preço
             document.querySelector('#Alimentos').innerHTML +=
                 '<div class="card" style="width: 18rem;">' +
-                '<img src="' + img + '" class="card-img-top" alt="' + nome + '">' +
+                '<div style="background-image: url(\'' + img + '\');background-position: center;  background-repeat: no-repeat;height: 200px; background-size: 200px;margin:none"></div>' +
                 '<div class="card-body">' +
                 '<p class="card-text">Especie: ' + lista_de_especies[i] + '</p>' +
                 '<p class="card-text">Tipo: ' + nome + '</p>' +
