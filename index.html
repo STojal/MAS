@@ -18,6 +18,34 @@
             background-color: white;
             color: #1B192E;
         }
+        .card {
+            transition: transform .2s; /* Animation */
+            border: 4px solid #1B192E;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+        .card button {
+            background: transparent;
+            border: 2px solid #1B192E;
+            color: #1B192E;
+            transition: transform .2s, background .2s, color .2s; /* Animation */
+        }
+
+        .card button:hover {
+            transform: scale(1.05); /* (105% zoom) */
+            color: white;
+            background: #1B192E;
+        }
+        .card .btn {
+            opacity: 0;
+            transition: opacity .2s; /* Animation */
+        }
+
+        .card:hover .btn {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -78,7 +106,7 @@
                     <!-- Card 1 -->
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <div class="card-body" style="height: 400px; border-color: #1B192E; border: 20px; background-color: whitesmoke;">
+                            <div class="card-body" style="height: 450px; border-color: #1B192E; border: 20px; background-color: white;">
                                 <div style="text-align: center; margin-top: 40px;">
                                     <h3 class="card-title">Plano Base</h3>
                                 </div>
@@ -89,11 +117,14 @@
                                 </div>
                                 <div style="margin-top: 100px;">
                                     <ul>
-                                        <li>Frase 1</li>
-                                        <li>Frase 2</li>
-                                        <li>Frase 3</li>
+                                        <p><i class="fas fa-check"></i> 2 Animais</p>
+                                        <p><i class="fas fa-check"></i> 1 Consulta ao Domicílio por mês</pi>
+                                        <p><i class="fas fa-check"></i> Ração entregue ao Domicílio</p>
                                         <!-- Add more phrases as needed -->
                                     </ul>
+                                </div>
+                                <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                                    <button type="button" class="btn btn-lg custom-btn" onclick="location.href='Planos.html'" style=" padding-bottom: 10px;">More Details</button>
                                 </div>
                             </div>
                         </div>
@@ -102,17 +133,20 @@
                     <!-- Card 1 -->
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <div class="card-body" style="height: 400px; border-color: #1B192E; border: 20px; background-color: whitesmoke;">
+                            <div class="card-body" style="height: 450px; border-color: #1B192E; border: 20px; background-color: white;">
                                 <div style="text-align: center; margin-top: 40px;">
                                     <h4 class="card-title">Plano Médio</h4>
                                 </div>
                                 <div style="margin-top: 100px;">
                                     <ul>
-                                        <li>Frase 1</li>
-                                        <li>Frase 2</li>
-                                        <li>Frase 3</li>
+                                        <p><i class="fas fa-check"></i> 5 Animais</p>
+                                        <p><i class="fas fa-check"></i> 3 Consulta ao Domicílio por mês</pi>
+                                        <p><i class="fas fa-check"></i> Ração entregue ao Domicílio</p>
                                         <!-- Add more phrases as needed -->
                                     </ul>
+                                </div>
+                                <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 30px;">
+                                    <button type="button" class="btn btn-lg custom-btn" onclick="location.href='Planos.html'" style=" padding-bottom: 10px;">More Details</button>
                                 </div>
                             </div>
                         </div>
@@ -121,17 +155,21 @@
                     <!-- Card 1 -->
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <div class="card-body" style="height: 400px; border-color: #1B192E; border: 20px; background-color: whitesmoke;">
+                            <div class="card-body" style="height: 450px; border-color: #1B192E; border: 20px; background-color: white;">
                                 <div style="text-align: center; margin-top: 40px;">
                                     <h4 class="card-title">Plano Premium</h4>
                                 </div>
-                                <div style="margin-top: 100px;">
+                                <div style="margin-top: 80px;">
                                     <ul>
-                                        <li>Frase 1</li>
-                                        <li>Frase 2</li>
-                                        <li>Frase 3</li>
+                                        <p><i class="fas fa-check"></i> 7 Animais</p>
+                                        <p><i class="fas fa-check"></i> 5 Consulta ao Domicílio por mês</pi>
+                                        <p><i class="fas fa-check"></i> Ração entregue ao Domicílio</p>
+                                        <p><i class="fas fa-check"></i> Desconto na compra de artigos</p>
                                         <!-- Add more phrases as needed -->
                                     </ul>
+                                </div>
+                                <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 30px;">
+                                    <button type="button" class="btn btn-lg custom-btn" onclick="location.href='Planos.html'" style=" margin-bottom: 10px;">More Details</button>
                                 </div>
                             </div>
                         </div>
