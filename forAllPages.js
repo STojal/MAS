@@ -69,7 +69,7 @@ $(document).ready(function(){
                     '<a class="nav-link" href="AboutUs.html" style="margin-right: 30px;">Sobre nos</a>'+
                 '</li>'+
                 '<li class="nav-item">'+
-                    '<a class="nav-link" href="Login.html" style="margin-right: 30px;">Entrar</a>'+
+                    '<a class="nav-link" href="Entrar.html" style="margin-right: 30px;">Entrar</a>'+
                 '</li>'+
             '</ul>'+
         '</div>'+
