@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
     var estadoEntrada = localStorage.getItem("entrada")
-    if (estadoEntrada ==undefined){
+    if (estadoEntrada ==undefined || estadoEntrada.length==0){
         estadoEntrada =0
     }
     if (estadoEntrada ==1){
