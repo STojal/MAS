@@ -73,6 +73,7 @@
                     <button onclick="selectOption('${selectedHour}', '1')">At Home</button>
                     <button onclick="selectOption('${selectedHour}', '2')">At Clinic</button>
                     <button onclick="selectOption('${selectedHour}', '3')">Cancel</button>
+                    <button onclick="selectOption('${selectedHour}', '4')">Retirar consulta</button>
                 `;
 
             const popup = document.createElement('div');
@@ -100,7 +101,9 @@
                 cell.style.backgroundColor = 'green';
             } else if (option === '3') {
                 // User canceled the action
-            } else {
+            } else if (option === '4') {
+                cell.style.backgroundColor = 'white';            }
+            else {
                 alert('Invalid option. Please try again.');
             }
 
