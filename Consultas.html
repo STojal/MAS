@@ -97,9 +97,12 @@
             const cell = document.querySelector(`#hoursTableContainer td[data-hour="${selectedHour}"]`);
             const popup = document.querySelector('div[style*="translate(-50%, -50%)"]');
 
-            if (option === '1' || option === '2') {
+            if (option === '1' ) {
                 cell.style.backgroundColor = 'green';
-            } else if (option === '3') {
+
+            } else if (option === '2') {
+                cell.style.backgroundColor = 'blue';            }
+            else if (option === '3') {
                 // User canceled the action
             } else if (option === '4') {
                 cell.style.backgroundColor = 'white';            }
