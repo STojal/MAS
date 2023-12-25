@@ -36,7 +36,7 @@
     </nav>
 
     <label for="datePicker">Select Date:</label>
-    <input type="date" id="datePicker" onchange="onDateChange(this.value)">
+    <input type="date" id="datePicker" min='2023-12-24'  onchange="onDateChange(this.value)" >
 
     <!-- Table for displaying hours -->
     <div id="hoursTableContainer"></div>
@@ -72,31 +72,31 @@
             checktable()
         }
 
-        function checktable(){
+        function checktable() {
             var table = document.getElementById("hoursTableContainer");
             var dia = document.getElementById('datePicker').value;
             var Savedconsults = localStorage.getItem("Consulta");
             Savedconsults = JSON.parse(Savedconsults)
             var cells = table.getElementsByTagName("td");
-            if (Savedconsults == null){
-                Savedconsults =[]
+            if (Savedconsults == null) {
+                Savedconsults = []
             }
             for (var i = 0; i < Savedconsults.length; i++) {
                 if (Savedconsults[i][1].toString() === dia.toString()) {
 
                     for (var p = 0; p < 9; p++) {
-  
+
                         var texto = cells[p].textContent;
                         console.log(texto === Savedconsults[i][0].toString());
                         if (texto === Savedconsults[i][0].toString()) {
-                            cells[p].style.backgroundColor ='green';
+                            cells[p].style.backgroundColor = 'green';
                         }
                     }
 
-                    
+
                 }
             }
- 
+
         }
         function showOptions(selectedHour) {
             const optionContainer = document.createElement('div');
@@ -175,22 +175,37 @@
             console.log(Savedconsults)
             localStorage.setItem("Consulta", JSON.stringify(Savedconsults));
         }
-            function removeconsult(hora) {
-                var Savedconsults = localStorage.getItem("Consulta");
-                Savedconsults = JSON.parse(Savedconsults)
+        function removeconsult(hora) {
+            var Savedconsults = localStorage.getItem("Consulta");
+            Savedconsults = JSON.parse(Savedconsults)
 
-                var dia = document.getElementById('datePicker').value;
-                var consulta = [hora, dia]
-                console.log(consulta)
-                for (var i = 0; i < Savedconsults.length; i++) {
-                    if (Savedconsults[i].toString() === consulta.toString()) {
-                        Savedconsults.splice(i, 1);
-                        break;  
-                    }
+            var dia = document.getElementById('datePicker').value;
+            var consulta = [hora, dia]
+            console.log(consulta)
+            for (var i = 0; i < Savedconsults.length; i++) {
+                if (Savedconsults[i].toString() === consulta.toString()) {
+                    Savedconsults.splice(i, 1);
+                    break;
                 }
-                localStorage.setItem("Consulta", JSON.stringify(Savedconsults));
+            }
+            localStorage.setItem("Consulta", JSON.stringify(Savedconsults));
 
         }
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
+
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+
+        today = yyyy + '-' + mm + '-' + dd;
+        document.getElementById("datePicker").setAttribute("min", today);
     </script>
 
 </body>
