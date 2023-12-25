@@ -60,7 +60,7 @@ $(document).ready(function(){
             '</ul>'+
             '<ul class="navbar-nav">'+
                 '<li class="nav-item">'+
-                    '<a class="nav-link" href="Consultas.html" style="margin-right: 30px;">Consultas</a>'+
+                    '<a class="nav-link" href="Entrar.html" style="margin-right: 30px;">Consultas</a>'+
                 '</li>'+
                 '<li class="nav-item">'+
                     '<a class="nav-link" href="Comida.html" style="margin-right: 30px;">Comida</a>'+
