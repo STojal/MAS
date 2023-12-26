@@ -37,7 +37,7 @@ $(document).ready(function(){
                       '<a class="dropdown-item" href="Planos.html">Planos</a>'+
                       '<a class="dropdown-item" href="MyPets.html">Pets</a>'+
                       '<div class="dropdown-divider"></div>'+
-                      '<button id="LogOut">Logout<button>'+
+                      '<button id="LogOut">Logout</button>'+
                   '</div>'+
               '</li>'+
             '</ul>'+
@@ -109,7 +109,7 @@ $(document).ready(function(){
                       '<a class="dropdown-item" href="MyProfileVet.html">MyProfile</a>'+
                       '<a class="dropdown-item" href="HorarioVets.html">Hórario</a>'+
                       '<div class="dropdown-divider"></div>'+
-                      '<button id="LogOut">Logout<button>'+
+                      '<button id="LogOut">Logout</button>'+
                   '</div>'+
               '</li>'+
             '</ul>'+
