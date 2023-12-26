@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
     var estadoEntrada = localStorage.getItem("entrada")
     if (estadoEntrada ==undefined || estadoEntrada.length==0){
