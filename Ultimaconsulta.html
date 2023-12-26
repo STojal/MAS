@@ -78,8 +78,8 @@
                 <div class="card-header bg-transparent border-0">
                 <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Informação da ultima consulta</h3>
                 </div>
-                <div class="card-body pt-0">
-                    <textarea id="myTextArea" name="userInput" rows="4" cols="100%" placeholder="A espera de dados"></textarea>
+                <div class="card-body pt-0" id="area">
+                    
                 </div>
             </div>
             </div>
@@ -119,8 +119,26 @@ Número:232456789</pre>
     <script></script>
     <script src="forAllPages.js"></script>
     <script>
+        var inf = localStorage.getItem("lastConsult")
+        var inf2 = (inf.trim())
+        if (inf2 ==undefined || inf2=='' || inf2== null){
+            $('#area').append( '<textarea class="myTextArea" name="userInput" rows="4" cols="100%" placeholder="A espera de dados"></textarea>' )
+        }
+        else{
+            $('#area').append('<p><span> informação: '+  inf +'</span></p>')
+            $('#area').append('<button id="myTextArea">Editar</button>');
+            
+        }
+        $('#myTextArea').click(function(){
+            $('#area').append('<textarea class="myTextArea" name="userInput" rows="4" cols="100%" placeholder="A espera de dados"></textarea>');
+
+
+
+        })
         $('#inf').click(function(){
-            var lastconsult = $("#myTextArea").val()
+            console.log("aaaaaaa")
+            var lastconsult = $(".myTextArea").val()
+            console.log(lastconsult)
             console.log(lastconsult)
             localStorage.setItem("lastConsult", lastconsult)
         })
