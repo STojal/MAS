@@ -2,151 +2,254 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Consultas</title>
     <link rel="stylesheet" href="CSS.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
+        /* Additional CSS for centering and resizing the table */
 
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
+            body {
+                font-family: 'Arial', sans-serif;
+                margin: 0;
+                display: flex;
+    
+                min-height: 100vh; 
+            }
+            
+            #hoursTableContainer {
+                flex-direction: column; 
+                align-items: center; 
+                justify-content: center; 
+                margin-top: 20px;
+                margin: 50px auto;
+                max-width: 1000px;
+                overflow-x: auto;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                background-color: #ffffff;
+            }
+    
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                table-layout: fixed;
+                border-spacing: 0;
+            }
+    
+            th, td {
+                text-align: center;
+                padding: 15px;
+                border: 1px solid #dee2e6;
+            }
+    
+            th {
+                background-color: #007bff;
+                color: #ffffff;
+            }
+    
+            td {
+                background-color: #f0f0f0;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+    
+            td:hover {
+                background-color: #ddd;
+            }
+    
+            input[type="date"] {
+                margin-top: 20px;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #ced4da;
+                border-radius: 5px;
+                outline: none;
+            }
+        </style>
 
-        th {
-            background-color: #f2f2f2;
-        }
-
-        .selected {
-            background-color: #4CAF50;
-            color: white;
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Sua barra de navegação -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="images/thumbnail_image.png" title="Logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Super Pets</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" style="margin-right: 30px;">Consultas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Comida.html" style="margin-right: 30px;">Comida</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" style="margin-right: 30px;">Sobre nos</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <nav class="navbar navbar-expand-lg" id="nav">
+
     </nav>
 
-    <div>
-        <label for="month">Select a Month:</label>
-        <select id="month" data-bind="value: selectedMonth, event: { change: updateCalendar }">
-            <option value="1">January</option>
-            <option value="2">February</option>
-            <option value="3">March</option>
-            <option value="4">April</option>
-            <option value="5">May</option>
-            <option value="6">June</option>
-            <option value="7">July</option>
-            <option value="8">August</option>
-            <option value="9">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
-        </select>
-    </div>
+    <label for="datePicker">Select Date:</label>
+    <input type="date" id="datePicker" min='2023-12-24'  onchange="onDateChange(this.value)" >
 
-    <table>
-        <thead>
-            <tr data-bind="foreach: weekdays">
-                <th data-bind="text: $data"></th>
-            </tr>
-        </thead>
-        <tbody data-bind="foreach: calendar">
-            <tr data-bind="foreach: $data">
-                <td data-bind="text: day, click: $parent.selectDay, css: { 'selected': selected }"></td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Table for displaying hours -->
+    <div id="hoursTableContainer"></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="forAllPages.js"></script>
     <script>
-        function DayModel(day, month, year) {
-            this.day = day;
-            this.month = month;
-            this.year = year;
-            this.selected = ko.observable(false);
+        $('#datePicker').change(function () {
+            console.log(this.value)
+        })
+        function createHoursTable(hours, rows, cols) {
+            let table = '<table>';
+            for (let i = 0; i < rows; i++) {
+                table += '<tr>';
+                for (let j = 0; j < cols; j++) {
+                    const index = i * cols + j;
+                    const hour = hours[index];
+                    table += `<td data-hour="${hour}" onclick="showOptions('${hour}')">${hour}</td>`;
+                }
+                table += '</tr>';
+            }
+            table += '</table>';
+            return table;
         }
 
-        function CalendarViewModel() {
-            var self = this;
+        function displayHoursTable(hours, rows, cols) {
+            const tableHtml = createHoursTable(hours, rows, cols);
+            document.getElementById('hoursTableContainer').innerHTML = tableHtml;
+            checktable()
+        }
 
-            self.weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-            self.selectedMonth = ko.observable(new Date().getMonth() + 1);
-            self.selectedYear = 2024; // Set the year to 2024
-            self.calendar = ko.observableArray([]);
+        function checktable() {
+            var table = document.getElementById("hoursTableContainer");
+            var dia = document.getElementById('datePicker').value;
+            var Savedconsults = localStorage.getItem("Consulta");
+            Savedconsults = JSON.parse(Savedconsults)
+            var cells = table.getElementsByTagName("td");
+            if (Savedconsults == null) {
+                Savedconsults = []
+            }
+            for (var i = 0; i < Savedconsults.length; i++) {
+                if (Savedconsults[i][1].toString() === dia.toString()) {
 
-            self.updateCalendar = function () {
-                self.calendar([]);
-                var firstDay = new Date(self.selectedYear, self.selectedMonth - 1, 1).getDay();
-                var daysInMonth = new Date(self.selectedYear, self.selectedMonth, 0).getDate();
+                    for (var p = 0; p < 9; p++) {
 
-                var daysArray = [];
-                var dayCounter = 1;
-
-                for (var i = 0; i < 6; i++) {
-                    var week = [];
-                    for (var j = 0; j < 7; j++) {
-                        if (i === 0 && j < firstDay) {
-                            week.push(new DayModel('', '', ''));
-                        } else if (dayCounter <= daysInMonth) {
-                            week.push(new DayModel(dayCounter, self.selectedMonth, self.selectedYear));
-                            dayCounter++;
-                        } else {
-                            week.push(new DayModel('', '', ''));
+                        var texto = cells[p].textContent;
+                        console.log(texto === Savedconsults[i][0].toString());
+                        if (texto === Savedconsults[i][0].toString()) {
+                            cells[p].style.backgroundColor = 'green';
                         }
                     }
-                    self.calendar.push(week);
+
+
                 }
-            };
+            }
 
-            self.selectDay = function (selectedDay) {
-                var dayModel = selectedDay;
-                dayModel.selected(!dayModel.selected());
-            };
+        }
+        function showOptions(selectedHour) {
+            const optionContainer = document.createElement('div');
+            optionContainer.innerHTML = `
+                    <p>Select an option for ${selectedHour}:</p>
+                    <button onclick="selectOption('${selectedHour}', '1')">At Home</button>
+                    <button onclick="selectOption('${selectedHour}', '2')">At Clinic</button>
+                    <button onclick="selectOption('${selectedHour}', '3')">Cancel</button>
+                    <button onclick="selectOption('${selectedHour}', '4')">Retirar consulta</button>
+                `;
 
-            self.updateCalendar();
+            const popup = document.createElement('div');
+            popup.style.position = 'absolute';
+            popup.style.top = '50%';
+            popup.style.left = '50%';
+            popup.style.transform = 'translate(-50%, -50%)';
+            popup.style.backgroundColor = 'white';
+            popup.style.padding = '20px';
+            popup.style.border = '1px solid #ccc';
+            popup.appendChild(optionContainer);
+
+            document.body.appendChild(popup);
+
+            
         }
 
-        ko.applyBindings(new CalendarViewModel());
+        function selectOption(selectedHour, option) {
+            const cell = document.querySelector(`#hoursTableContainer td[data-hour="${selectedHour}"]`);
+            const popup = document.querySelector('div[style*="translate(-50%, -50%)"]');
+
+            if (option === '1') {
+                cell.style.backgroundColor = 'green';
+                saveconsult(selectedHour)
+
+            } else if (option === '2') {
+                saveconsult(selectedHour)
+                cell.style.backgroundColor = 'green';
+            }
+            else if (option === '3') {
+                // User canceled the action
+            } else if (option === '4') {
+                cell.style.backgroundColor = 'white';
+                removeconsult(selectedHour)
+            }
+            else {
+                alert('Invalid option. Please try again.');
+            }
+
+            if (popup) {
+                document.body.removeChild(popup);
+            }
+        }
+
+        function onDateChange(selectedDate) {
+            // Create an array with all hours of the day
+            const hoursOfDay = [];
+            for (let hour = 9; hour < 18; hour++) {
+                hoursOfDay.push(`${hour.toString().padStart(2, '0')}:00`);
+            }
+
+            displayHoursTable(hoursOfDay, 3, 3); // You can adjust the rows and columns as needed
+        }
+
+
+        function saveconsult(hora) {
+            var Savedconsults = localStorage.getItem("Consulta");
+            if (Savedconsults == undefined) {
+                Savedconsults = []
+            }
+            else {
+                Savedconsults = JSON.parse(Savedconsults)
+            }
+            var dia = document.getElementById('datePicker').value;
+            Savedconsults.push([hora, dia])
+            console.log(Savedconsults)
+            localStorage.setItem("Consulta", JSON.stringify(Savedconsults));
+        }
+        function removeconsult(hora) {
+            var Savedconsults = localStorage.getItem("Consulta");
+            Savedconsults = JSON.parse(Savedconsults)
+
+            var dia = document.getElementById('datePicker').value;
+            var consulta = [hora, dia]
+            console.log(consulta)
+            for (var i = 0; i < Savedconsults.length; i++) {
+                if (Savedconsults[i].toString() === consulta.toString()) {
+                    Savedconsults.splice(i, 1);
+                    break;
+                }
+            }
+            localStorage.setItem("Consulta", JSON.stringify(Savedconsults));
+
+        }
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
+
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+
+        today = yyyy + '-' + mm + '-' + dd;
+        document.getElementById("datePicker").setAttribute("min", today);
     </script>
+
 </body>
 
 </html>
