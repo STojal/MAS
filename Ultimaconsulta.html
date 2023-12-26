@@ -120,8 +120,9 @@ Número:232456789</pre>
     <script src="forAllPages.js"></script>
     <script>
         var inf = localStorage.getItem("lastConsult")
-        var inf2 = (inf.trim())
-        if (inf2 ==undefined || inf2=='' || inf2== null){
+        if (inf != null){
+        var inf2 = (inf.trim())}
+        if (inf2 ==undefined || inf2=='' || inf2== null || inf==null ){
             $('#area').append( '<textarea class="myTextArea" name="userInput" rows="4" cols="100%" placeholder="A espera de dados"></textarea>' )
         }
         else{
