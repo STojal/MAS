@@ -163,9 +163,7 @@
 
             document.body.appendChild(popup);
 
-            popup.addEventListener('click', function () {
-                document.body.removeChild(popup);
-            });
+            
         }
 
         function selectOption(selectedHour, option) {
@@ -177,6 +175,7 @@
                 saveconsult(selectedHour)
 
             } else if (option === '2') {
+                saveconsult(selectedHour)
                 cell.style.backgroundColor = 'green';
             }
             else if (option === '3') {
