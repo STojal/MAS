@@ -68,7 +68,7 @@ function loadanimals() {
                 '<div class="card-body">' +
                 '<p class="card-text">Especie: ' + lista_de_especies[i] + '</p>' +
                 '<p class="card-text">Tipo: ' + nome + '</p>' +
-                '<p>Preço: ' + Preço + '/kg <button style="float: right;" value=' + Preço + ' onclick="addpurchase()" name="' + nome + "_" + lista_de_especies[i] + '"><i class="fa fa-shopping-bag"></i> Comprar </button></p>' +
+                '<p>Preço: ' + Preço + '/kg <button style="float: right;" value=' + Preço + ' onclick="handleButtonClick()" name="' + nome + "_" + lista_de_especies[i] + '"><i class="fa fa-shopping-bag"></i> Comprar </button></p>' +
                 '</div>'
         }
         i++
@@ -94,7 +94,7 @@ $('#especie').on('change', function () {
                     '<div class="card-body">' +
                     '<p class="card-text">Especie: ' + lista_de_especies[i] + '</p>' +
                     '<p class="card-text">Tipo: ' + nome + '</p>' +
-                    '<p>Preço: ' + Preço + '/kg <button style="float: right;" value=' + Preço + ' onclick="addpurchase()" name="' + nome + "_" + lista_de_especies[i] + '"><i class="fa fa-shopping-bag"></i> Comprar </button></p>' +
+                    '<p>Preço: ' + Preço + '/kg <button style="float: right;" value=' + Preço + ' onclick="handleButtonClick()" name="' + nome + "_" + lista_de_especies[i] + '"><i class="fa fa-shopping-bag"></i> Comprar </button></p>' +
                     '</div>'
             }
             i++
@@ -111,7 +111,7 @@ $('#especie').on('change', function () {
                 '<div class="card-body">' +
                 '<p class="card-text">Especie: ' + lista_de_especies[value] + '</p>' +
                 '<p class="card-text">Tipo: ' + nome + '</p>' +
-                '<p>Preço: ' + Preço + '/kg <button style="float: right;" value=' + Preço + ' onclick="addpurchase()" name="' + nome + "_" + lista_de_especies[value] + '"><i class="fa fa-shopping-bag"></i> Comprar </button></p>' +
+                '<p>Preço: ' + Preço + '/kg <button style="float: right;" value=' + Preço + ' onclick="handleButtonClick()" name="' + nome + "_" + lista_de_especies[value] + '"><i class="fa fa-shopping-bag"></i> Comprar </button></p>' +
                 '</div>'
         }
     }
@@ -222,6 +222,17 @@ function addpurchase() {
     var escrevr = document.getElementById("total")
     escrevr.textContent = total.toFixed(2)
     numero_de_produtos += 1
+}
+function handleButtonClick() {
+    var estadoEntrada = localStorage.getItem("entrada");
+
+    if (estadoEntrada == 0) {
+        // Redirecionar para a página de login se o estadoEntrada for 0
+        window.location.href = "Login.html";
+    } else {
+        // Executar a lógica de compra se o estadoEntrada não for 0
+        addpurchase();
+    }
 }
 //limpar o total
 function limpar() {
