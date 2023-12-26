@@ -46,7 +46,7 @@
                 <div class="card-body pt-0">
                 <table class="table table-bordered">
                     <tr>
-                    <th width="30%">vacians em falta</th>
+                    <th width="30%">vacinas em falta</th>
                     <td width="2%">:</td>
                     <td>False</td>
                     </tr>
@@ -79,7 +79,7 @@
                 <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Informação da ultima consulta</h3>
                 </div>
                 <div class="card-body pt-0">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p id="infor"></p>
                 </div>
             </div>
             </div>
@@ -118,6 +118,19 @@ Número:232456789</pre>
       crossorigin="anonymous"></script>
     <script></script>
     <script src="forAllPages.js"></script>
+    <script>
+        var inf = localStorage.getItem("lastConsult")
+        if (inf ==undefined){
+            $('#infor').text("A espera de atualização")
+        }
+        else{
+            console.log("ola")
+            $('#infor').text(inf)
+        }
+
+
+
+    </script>
 </body>
 
 </html>

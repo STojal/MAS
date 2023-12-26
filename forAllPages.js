@@ -108,6 +108,7 @@ $(document).ready(function(){
                   '<div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 30px;">'+
                       '<a class="dropdown-item" href="MyProfileVet.html">MyProfile</a>'+
                       '<a class="dropdown-item" href="HorarioVets.html">Hórario</a>'+
+                      '<a class="dropdown-item" href="Ultimaconsulta.html">Ultima consulta</a>'+
                       '<div class="dropdown-divider"></div>'+
                       '<button id="LogOut">Logout</button>'+
                   '</div>'+
