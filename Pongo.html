@@ -90,14 +90,28 @@
     </div>
 
 
+    <div style="height: 100vh;"></div>
 
   <!---  footer e botao para alterar fundo !-->
 
-  <footer class="footer mt-auto py-3 bg-body-tertiary">
-    <div class="container">
-      <span class="text-body-secondary">Place sticky footer content here.</span>
-
-    </div>
+  <div style="z-index: 1; position: relative;">
+    <footer style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #f2f2f2;">
+        <div style="display: flex; align-items: center;">
+            <a href="index.html">
+                <img class="img-fluid" src="images/thumbnail_image.png" style="height: 40px;"> 
+            </a>
+            <p style="margin: 0; color: black;">&copy; 2023 SuperPets</p>
+            <a class="d-none d-md-block" style="margin-left: 20px;" href="https://www.instagram.com/"><img src="images/instagram-icon.png" alt="" style="height: 30px;"></a>
+            <a class="d-none d-md-block" style="margin-left: 10px;" href="https://www.facebook.com/"><img src="images/Facebook_Logo.png" alt="" style="height: 30px;"></a>
+        </div>
+        <div class="col-md-4" style="display: flex; align-items: center;">
+            <p class="d-none d-md-block" style="margin-right: 30px; color: black;">Em caso de dúvida contacte:</p>
+            <pre style="color: black;">
+Email- superpets@super.pt
+Número:232456789</pre>
+        </div>
+    </footer>
+  </div>
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
