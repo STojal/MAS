@@ -22,7 +22,8 @@
         .card {
             transition: transform .2s; /* Animation */
             border: 4px solid #1B192E;
-            width: 300px;
+            min-width: 280px;
+            max-width: 320px;
         
         }
 
@@ -54,15 +55,15 @@
             z-index: 1000;
         }
         .navbar-collapse {
-            background-color: whitesmoke;
+            background-color: white;
             width: 100vw !important;
-            padding: 15px;
+            padding: 10px;
             
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg" style="height: 8vh;" id="nav">
+    <nav class="navbar navbar-expand-lg" style="height: 10vh;" id="nav">
         
     </nav>
     <div style="overflow-y: auto;">
@@ -72,7 +73,7 @@
         height: 92vh;
         position: relative;
         z-index: 2;">
-            <div class="container" style="z-index: 2;">
+            <div class="container" style="z-index: 2;"> <!-- capa -->
                 <div>
                     <div class="text-center">
                         <h1 class="display-2" style="font-size: 7em; padding-top: 150px; color: white;">Super Pets</h1>
@@ -89,12 +90,12 @@
             <div class="container mt-5">
                 <h2 class="text-center">Os Nossos Planos:</h2>
             </div>
-            <div class="container mt-5 justify-content-center align-items-center">
+            <div class="container mt-5 justify-content-center">
                 <div class="row">
                     <!-- Card 1 -->
-                    <div class="col-12 col-lg-4 mb-4 mx-auto ml-0 justify-content-center align-items-center">
-                        <div class="card h-100">
-                            <div class="card-body d-flex flex-column" style="height: 490px; border-color: #1B192E; border: 20px; background-color: white; padding-left: 0%;">
+                    <div class="col-10 col-md-10 col-lg-4 mb-4 d-flex justify-content-center align-items-center">
+                        <div class="card m-0 p-0">
+                            <div class="card-body" style="height: 490px; border-color: #1B192E; background-color: white;">
                                 <div style="text-align: center; margin-top: 40px;">
                                     <h3 class="card-title">Plano Base</h3>
                                 </div>
@@ -118,10 +119,10 @@
                         </div>
                     </div>
                     
-                    <!-- Card 1 -->
-                    <div class="col-12 col-lg-4 mb-4 mx-auto">
-                        <div class="card">
-                            <div class="card-body" style="height: 490px; border-color: #1B192E; border: 20px; background-color: white;">
+                    <!-- Card 2 -->
+                    <div class="col-10 col-md-10 col-lg-4 mb-4 d-flex justify-content-center align-items-center">
+                        <div class="card m-0 p-0">
+                            <div class="card-body" style="height: 490px; border-color: #1B192E; background-color: white;">
                                 <div style="text-align: center; margin-top: 40px;">
                                     <h3 class="card-title">Plano Médio</h3>
                                 </div>
@@ -145,10 +146,10 @@
                         </div>
                     </div>
             
-                    <!-- Card 1 -->
-                    <div class="col-12 col-lg-4 mb-4 mx-auto">
-                        <div class="card">
-                            <div class="card-body" style="height: 490px; border-color: #1B192E; border: 20px; background-color: white;">
+                    <!-- Card 3 -->
+                    <div class="col-10 col-md-10 col-lg-4 mb-4 d-flex justify-content-center align-items-center">
+                        <div class="card m-0 p-0">
+                            <div class="card-body" style="height: 490px; border-color: #1B192E; background-color: white;">
                                 <div style="text-align: center; margin-top: 40px;">
                                     <h3 class="card-title">Plano Premium</h3>
                                 </div>
@@ -166,7 +167,7 @@
                                         <!-- Add more phrases as needed -->
                                     </ul>
                                 </div>
-                                <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 30px;">
+                                <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-bottom: 10%;">
                                     <button type="button" class="btn btn-lg custom-btn" onclick="location.href='Planos.html'" style=" margin-bottom: 10px;">More Details</button>
                                 </div>
                             </div>
@@ -192,7 +193,7 @@
                             <div class="col-md-4 d-flex flex-column align-items-center">
                                 <h1 class="display-4">A Nossa Loja</h1>
                                 <p>Explore os nossos produtos</p>
-                                <a class="btn btn-primary btn-lg" style="margin-top: 20px; background-color: #1B192E; border-color: #1B192E;" href="Comida.html" role="button">Ver catálogo</a>
+                                <a class="btn btn-primary btn-lg" style="margin-bottom: 10px; padding-bottom: 10px; margin-top: 20px; background-color: #1B192E; border-color: #1B192E;" href="Comida.html" role="button">Ver catálogo</a>
                             </div>
                             <div class="col-md-8">
                                 <img src="images/DogAndFood.jpeg" class="img-fluid" alt="STORE">
@@ -268,10 +269,13 @@
                         <img class="img-fluid" src="images/thumbnail_image.png" style="height: 40px;"> 
                     </a>
                     <p style="margin: 0;">&copy; 2023 SuperPets</p>
+                    <a class="d-none d-md-block" style="margin-left: 20px;" href="https://www.instagram.com/"><img src="images/instagram-icon.png" alt="" style="height: 30px;"></a>
+                    <a class="d-none d-md-block" style="margin-left: 10px;" href="https://www.facebook.com/"><img src="images/Facebook_Logo.png" alt="" style="height: 30px;"></a>
                 </div>
-                <div style="display: flex; align-items: center;">
-                    <p style="margin-right: 30px;">Em caso de dúvida contacte:</p>
-                    <pre>Email- superpets@super.pt
+                <div class="col-md-4" style="display: flex; align-items: center;">
+                    <p class="d-none d-md-block" style="margin-right: 30px;">Em caso de dúvida contacte:</p>
+                    <pre>
+Email- superpets@super.pt
 Número:232456789</pre>
                 </div>
             </footer>
