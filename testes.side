@@ -1052,7 +1052,7 @@
       "id": "e07afa7b-2588-4419-98ae-d9eb30f2fd05",
       "comment": "",
       "command": "click",
-      "target": "linkText=Sobre nos",
+      "target": "linkText=Sobre nós",
       "targets": [
         ["linkText=Sobre nos", "linkText"],
         ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
@@ -1373,98 +1373,6 @@
       "value": ""
     }]
   }, {
-    "id": "7e7e3dea-4899-4eb0-891c-da7bd6fc969f",
-    "name": "10 Adicionar informação da ultima consulta",
-    "commands": [{
-      "id": "cdda6833-a793-4a59-8cf7-3bc0d6353f56",
-      "comment": "",
-      "command": "open",
-      "target": "/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ff8c3094-8d6f-4f77-bc33-6f503f4d3685",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1332x1031",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f3530fe9-15be-4c09-8777-018b8b5d6383",
-      "comment": "",
-      "command": "click",
-      "target": "id=navbarDropdown",
-      "targets": [
-        ["id=navbarDropdown", "id"],
-        ["linkText=MyProfile", "linkText"],
-        ["css=#navbarDropdown", "css:finder"],
-        ["xpath=//a[contains(text(),'MyProfile')]", "xpath:link"],
-        ["xpath=//a[@id='navbarDropdown']", "xpath:attributes"],
-        ["xpath=//div[@id='navbarSupportedContent']/ul[2]/li[4]/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
-        ["xpath=//li[4]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'MyProfile')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "5c188903-c71e-41b4-8f39-73243ae713d7",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Ultima consulta",
-      "targets": [
-        ["linkText=Ultima consulta", "linkText"],
-        ["css=.dropdown-item:nth-child(3)", "css:finder"],
-        ["xpath=//a[contains(text(),'Ultima consulta')]", "xpath:link"],
-        ["xpath=//div[@id='navbarSupportedContent']/ul[2]/li[4]/div/a[3]", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, 'Ultimaconsulta.html')]", "xpath:href"],
-        ["xpath=//a[3]", "xpath:position"],
-        ["xpath=//a[contains(.,'Ultima consulta')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "856581f7-039c-423a-921e-0bfce8b57ead",
-      "comment": "",
-      "command": "click",
-      "target": "name=userInput",
-      "targets": [
-        ["name=userInput", "name"],
-        ["css=.myTextArea", "css:finder"],
-        ["xpath=//textarea[@name='userInput']", "xpath:attributes"],
-        ["xpath=//div[@id='area']/textarea", "xpath:idRelative"],
-        ["xpath=//textarea", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "31c53752-1f2c-4658-b782-88784b0aebff",
-      "comment": "",
-      "command": "type",
-      "target": "name=userInput",
-      "targets": [
-        ["name=userInput", "name"],
-        ["css=.myTextArea", "css:finder"],
-        ["xpath=//textarea[@name='userInput']", "xpath:attributes"],
-        ["xpath=//div[@id='area']/textarea", "xpath:idRelative"],
-        ["xpath=//textarea", "xpath:position"]
-      ],
-      "value": "Consulta de rotina"
-    }, {
-      "id": "6072486b-da0f-44fb-b2ff-466bf7743d89",
-      "comment": "",
-      "command": "click",
-      "target": "id=inf",
-      "targets": [
-        ["id=inf", "id"],
-        ["linkText=Submeter", "linkText"],
-        ["css=#inf", "css:finder"],
-        ["xpath=//a[contains(text(),'Submeter')]", "xpath:link"],
-        ["xpath=//a[@id='inf']", "xpath:attributes"],
-        ["xpath=(//a[contains(@href, 'MyProfileVet.html')])[2]", "xpath:href"],
-        ["xpath=//div[2]/div/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Submeter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }]
-  }, {
     "id": "f7ed2493-d4d3-4ab2-8d21-0780187ccc9a",
     "name": "11 log out vet",
     "commands": [{
@@ -1511,6 +1419,105 @@
         ["xpath=//li[4]/div/button", "xpath:position"],
         ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
       ],
+      "value": ""
+    }]
+  }, {
+    "id": "7baf2006-f337-4370-83ac-2530d7e9bdee",
+    "name": "10 Adicionar informação da ultima consulta",
+    "commands": [{
+      "id": "bbf92c2d-f49a-46fe-8c54-34c614c21a9e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "104aae9a-fe87-4b83-9bb7-0da829d4b0e1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1332x1031",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b18523e3-aedf-43b2-a984-6ea8007504f1",
+      "comment": "",
+      "command": "click",
+      "target": "id=navbarDropdown",
+      "targets": [
+        ["id=navbarDropdown", "id"],
+        ["linkText=MyProfile", "linkText"],
+        ["css=#navbarDropdown", "css:finder"],
+        ["xpath=//a[contains(text(),'MyProfile')]", "xpath:link"],
+        ["xpath=//a[@id='navbarDropdown']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul[2]/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'MyProfile')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "73d4f408-01d9-4c1d-a794-868a19570802",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ultima consulta",
+      "targets": [
+        ["linkText=Ultima consulta", "linkText"],
+        ["css=.dropdown-item:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Ultima consulta')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul[2]/li[4]/div/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'Ultimaconsulta.html')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Ultima consulta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "12dafc4c-a1c6-4a18-ad1e-b7e3fbf2d1e9",
+      "comment": "",
+      "command": "click",
+      "target": "name=userInput",
+      "targets": [
+        ["name=userInput", "name"],
+        ["css=.myTextArea", "css:finder"],
+        ["xpath=//textarea[@name='userInput']", "xpath:attributes"],
+        ["xpath=//div[@id='area']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5eb51d6a-86a5-4b87-846a-a95b79e68f1d",
+      "comment": "",
+      "command": "type",
+      "target": "name=userInput",
+      "targets": [
+        ["name=userInput", "name"],
+        ["css=.myTextArea", "css:finder"],
+        ["xpath=//textarea[@name='userInput']", "xpath:attributes"],
+        ["xpath=//div[@id='area']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Consulta"
+    }, {
+      "id": "5a2514e7-c303-4991-adf2-5eec5b54dd49",
+      "comment": "",
+      "command": "click",
+      "target": "id=inf",
+      "targets": [
+        ["id=inf", "id"],
+        ["linkText=Submeter", "linkText"],
+        ["css=#inf", "css:finder"],
+        ["xpath=//a[contains(text(),'Submeter')]", "xpath:link"],
+        ["xpath=//a[@id='inf']", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, 'MyProfileVet.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Submeter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "beb850df-c1c3-411f-b893-9d305baeaa33",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }],
