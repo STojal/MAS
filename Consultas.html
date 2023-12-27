@@ -78,7 +78,7 @@
 
     </nav>
 
-    <label for="datePicker">Select Date:</label>
+    <label for="datePicker">Seleciona a data:</label>
     <input type="date" id="datePicker" min='2023-12-24'  onchange="onDateChange(this.value)" >
 
     <!-- Table for displaying hours -->
@@ -144,10 +144,10 @@
         function showOptions(selectedHour) {
             const optionContainer = document.createElement('div');
             optionContainer.innerHTML = `
-                    <p>Select an option for ${selectedHour}:</p>
-                    <button onclick="selectOption('${selectedHour}', '1')">At Home</button>
-                    <button onclick="selectOption('${selectedHour}', '2')">At Clinic</button>
-                    <button onclick="selectOption('${selectedHour}', '3')">Cancel</button>
+                    <p>Seleciona a opção para ${selectedHour}:</p>
+                    <button onclick="selectOption('${selectedHour}', '1')">Em casa</button>
+                    <button onclick="selectOption('${selectedHour}', '2')">Na clínica</button>
+                    <button onclick="selectOption('${selectedHour}', '3')">Cancelar</button>
                     <button onclick="selectOption('${selectedHour}', '4')">Retirar consulta</button>
                 `;
 
