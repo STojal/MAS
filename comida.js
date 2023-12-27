@@ -184,7 +184,7 @@ if (window.location.href.includes("Confirmar_compra.html")) {
             '<li class="list-group-item d-flex justify-content-between lh-sm">' +
             '<div>' +
             '<h6 class="my-0">' + tipo_de_alimento[0] + " para " + tipo_de_alimento[1] + '</h6>' +
-            '<small class="text-body-secondary">Brief description</small>' +
+            '<small class="text-body-secondary">'+ foodItem.Preço +'€/kg</small>' +
             '</div>' +
             '<span class="text-body-secondary">' +foodItem.Preço + '</span>' +
             '</li>'
@@ -192,8 +192,8 @@ if (window.location.href.includes("Confirmar_compra.html")) {
     // adciona o total a pagar
     document.querySelector('#Carrinho').innerHTML +=
         '<li class="list-group-item d-flex justify-content-between">' +
-        '<span> Total (USD) </span>' +
-        '<strong>' +total_pagar.toFixed(2)+'$</strong>' +
+        '<span> Total (EUR) </span>' +
+        '<strong>' +total_pagar.toFixed(2)+'€</strong>' +
         '</li>' +
         '</ul>' +
         '<form class="card p-2">' +
