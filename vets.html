@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <title>My Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Os nossos especialistas</title>
     <link rel="stylesheet" href="CSS.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         .card-img {
             border-radius: 20px !important;
-            height: 250px;
-            margin: none;
+            margin: 0;
+            object-fit: cover; 
+            height: 200px; 
         }
     </style>
 
@@ -20,7 +23,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg" id="nav">
-        
+
     </nav>
 
     <div>
@@ -28,57 +31,45 @@
     </div>
     <div class="row">
         <div class="card col-3">
-            <img src="images/DiogoSilva.jpg" class="card-img" alt="Diogo Silva">
-            <div class="card-body">
+            <div class="card-body text-center">
+                <img src="images/DiogoSilva.jpg" class="card-img img-fluid mb-2" alt="Diogo Silva">
                 <h5 class="card-title">Diogo Silva</h5>
                 <p class="card-text">Anestesista</p>
+                <a href="Diogo.html" class="btn btn-primary">Ver informação</a>
             </div>
         </div>
         <div class="card col-3">
-            <img src="images/Ana Martins.jpg" class="card-img" alt="Ana Martins">
-            <div class="card-body">
+            <div class="card-body text-center">
+                <img src="images/Ana Martins.jpg" class="card-img img-fluid mb-2" alt="Ana Martins">
                 <h5 class="card-title">Ana Martins</h5>
                 <p class="card-text">Cirurgião Veterinário</p>
+                <a href="Ana.html" class="btn btn-primary">Ver informação</a>
             </div>
         </div>
         <div class="card col-3">
-            <img src="images/Pedro Pimenta.jpg" class="card-img" alt="Pedro Pimenta">
-            <div class="card-body">
+            <div class="card-body text-center">
+                <img src="images/Pedro Pimenta.jpg" class="card-img img-fluid mb-2" alt="Pedro Pimenta">
                 <h5 class="card-title">Pedro Pimenta</h5>
                 <p class="card-text">Clínico Geral Veterinário </p>
+                <a href="Pedro.html" class="btn btn-primary">Ver informação</a>
             </div>
         </div>
     </div>
 
-    <div style="height: 100vh;"></div>
-
     <!---  footer e botao para alterar fundo !-->
-  
-    <div style="z-index: 1; position: relative;">
-      <footer style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #f2f2f2;">
-          <div style="display: flex; align-items: center;">
-              <a href="index.html">
-                  <img class="img-fluid" src="images/thumbnail_image.png" style="height: 40px;"> 
-              </a>
-              <p style="margin: 0; color: black;">&copy; 2023 SuperPets</p>
-              <a class="d-none d-md-block" style="margin-left: 20px;" href="https://www.instagram.com/"><img src="images/instagram-icon.png" alt="" style="height: 30px;"></a>
-              <a class="d-none d-md-block" style="margin-left: 10px;" href="https://www.facebook.com/"><img src="images/Facebook_Logo.png" alt="" style="height: 30px;"></a>
-          </div>
-          <div class="col-md-4" style="display: flex; align-items: center;">
-              <p class="d-none d-md-block" style="margin-right: 30px; color: black;">Em caso de dúvida contacte:</p>
-              <pre style="color: black;">
-  Email- superpets@super.pt
-  Número:232456789</pre>
-          </div>
-      </footer>
-    </div>
+
+    <footer class="footer mt-auto py-3 bg-body-tertiary">
+        <div class="container">
+            <span class="text-body-secondary">Place sticky footer content here.</span>
+        </div>
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-                integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-                crossorigin="anonymous"></script>
+                integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
                 crossorigin="anonymous"></script>
-                <script src="forAllPages.js"></script>
+        <script src="forAllPages.js"></script>
 
 </body>
+
+</html>

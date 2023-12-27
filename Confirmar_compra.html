@@ -25,11 +25,11 @@
 
             </div>
             <div class="col-md-7 col-lg-8">
-              <h4 class="mb-3">Billing address</h4>
+              <h4 class="mb-3">Endereço de Cobrança</h4>
               <form class="needs-validation" novalidate="">
                 <div class="row g-3">
                   <div class="col-sm-6">
-                    <label for="firstName" class="form-label">Primeiro Nome</label>
+                    <label for="firstName" class="form-label">Primeiro nome</label>
                     <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
                     <div class="invalid-feedback">
                       Necessita de um nome válido
@@ -49,15 +49,15 @@
       
                   <div class="col-12">
                     <label for="address" class="form-label">Morada</label>
-                    <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+                    <input type="text" class="form-control" id="address" placeholder="Rua de Lourenço Peixinho, nº 13" required="">
                     <div class="invalid-feedback">
                       Ensira uma Morada.
                     </div>
                   </div>
       
                   <div class="col-12">
-                    <label for="address2" class="form-label">Morada 2 <span class="text-body-secondary">(Optional)</span></label>
-                    <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                    <label for="address2" class="form-label">Morada 2 <span class="text-body-secondary">(Opcional)</span></label>
+                    <input type="text" class="form-control" id="address2" placeholder="Apartamento ou suíte">
                   </div>
       
 
@@ -67,7 +67,7 @@
       
                 <div class="form-check">
                   <input type="checkbox" class="form-check-input" id="save-info">
-                  <label class="form-check-label" for="save-info">Guardar informção para a proxima compra</label>
+                  <label class="form-check-label" for="save-info">Guardar informação para a próxima compra</label>
                 </div>
       
                 <hr class="my-4">
@@ -77,11 +77,11 @@
                 <div class="my-3">
                   <div class="form-check">
                     
-                    <label class="form-check-label" >Credit card<input  name="paymentMethod" type="radio" class="form-check-input"  class="paymentMethod" required=""  value="Credit"></label>
+                    <label class="form-check-label" >Cartão de crédito<input  name="paymentMethod" type="radio" class="form-check-input"  class="paymentMethod" required=""  value="Credit"></label>
                   </div>
                   <div class="form-check">
                     
-                    <label class="form-check-label">Debit card<input  name="paymentMethod" type="radio" class="form-check-input" class="paymentMethod" required=""  value="debit"></label>
+                    <label class="form-check-label">Cartão de débito<input  name="paymentMethod" type="radio" class="form-check-input" class="paymentMethod" required=""  value="debit"></label>
                   </div>
                   <div class="form-check">
                     
@@ -105,24 +105,11 @@
           </div>
     </div>
 
-    <div style="z-index: 1; position: relative;">
-      <footer style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #f2f2f2;">
-          <div style="display: flex; align-items: center;">
-              <a href="index.html">
-                  <img class="img-fluid" src="images/thumbnail_image.png" style="height: 40px;"> 
-              </a>
-              <p style="margin: 0;">&copy; 2023 SuperPets</p>
-              <a class="d-none d-md-block" style="margin-left: 20px;" href="https://www.instagram.com/"><img src="images/instagram-icon.png" alt="" style="height: 30px;"></a>
-              <a class="d-none d-md-block" style="margin-left: 10px;" href="https://www.facebook.com/"><img src="images/Facebook_Logo.png" alt="" style="height: 30px;"></a>
-          </div>
-          <div class="col-md-4" style="display: flex; align-items: center;">
-              <p class="d-none d-md-block" style="margin-right: 30px;">Em caso de dúvida contacte:</p>
-              <pre>
-Email- superpets@super.pt
-Número:232456789</pre>
-          </div>
+    <footer class="footer mt-auto py-3 bg-body-tertiary">
+        <div class="container">
+          <span class="text-body-secondary">Place sticky footer content here.</span>
+        </div>
       </footer>
-    </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="comida.js"></script>

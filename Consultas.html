@@ -78,7 +78,7 @@
 
     </nav>
 
-    <label for="datePicker">Select Date:</label>
+    <label for="datePicker">Seleciona a data:</label>
     <input type="date" id="datePicker" min='2023-12-24'  onchange="onDateChange(this.value)" >
 
     <!-- Table for displaying hours -->
@@ -144,10 +144,10 @@
         function showOptions(selectedHour) {
             const optionContainer = document.createElement('div');
             optionContainer.innerHTML = `
-                    <p>Select an option for ${selectedHour}:</p>
-                    <button onclick="selectOption('${selectedHour}', '1')">At Home</button>
-                    <button onclick="selectOption('${selectedHour}', '2')">At Clinic</button>
-                    <button onclick="selectOption('${selectedHour}', '3')">Cancel</button>
+                    <p>Seleciona a opção para ${selectedHour}:</p>
+                    <button onclick="selectOption('${selectedHour}', '1')">Em casa</button>
+                    <button onclick="selectOption('${selectedHour}', '2')">Na clínica</button>
+                    <button onclick="selectOption('${selectedHour}', '3')">Cancelar</button>
                     <button onclick="selectOption('${selectedHour}', '4')">Retirar consulta</button>
                 `;
 
@@ -249,24 +249,7 @@
         today = yyyy + '-' + mm + '-' + dd;
         document.getElementById("datePicker").setAttribute("min", today);
     </script>
-    <div style="z-index: 1; position: relative;">
-        <footer style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #f2f2f2; position: fixed; bottom: 0; width: 100%;">
-            <div style="display: flex; align-items: center;">
-                <a href="index.html">
-                    <img class="img-fluid" src="images/thumbnail_image.png" style="height: 40px;"> 
-                </a>
-                <p style="margin: 0;">&copy; 2023 SuperPets</p>
-                <a class="d-none d-md-block" style="margin-left: 20px;" href="https://www.instagram.com/"><img src="images/instagram-icon.png" alt="" style="height: 30px;"></a>
-                <a class="d-none d-md-block" style="margin-left: 10px;" href="https://www.facebook.com/"><img src="images/Facebook_Logo.png" alt="" style="height: 30px;"></a>
-            </div>
-            <div class="col-md-4" style="display: flex; align-items: center;">
-                <p class="d-none d-md-block" style="margin-right: 30px;">Em caso de dúvida contacte:</p>
-                <pre>
-    Email- superpets@super.pt
-    Número:232456789</pre>
-            </div>
-        </footer>
-    </div>
+
 </body>
 
 </html>
