@@ -15,7 +15,7 @@ $(document).ready(function(){
         '<div class="collapse navbar-collapse" id="navbarSupportedContent">'+
             '<ul class="navbar-nav me-auto mb-2 mb-lg-0">'+
                 '<li class="nav-item">'+
-                    '<a class="nav-link " aria-current="page" href="#">Super Pets</a>'+
+                    '<a class="nav-link " aria-current="page" href="index.html">Super Pets</a>'+
                 '</li>'+
             '</ul>'+
             '<ul class="navbar-nav">'+
@@ -26,7 +26,7 @@ $(document).ready(function(){
                     '<a class="nav-link" href="Comida.html" style="margin-right: 30px;">Comida</a>'+
                 '</li>'+
                 '<li class="nav-item">'+
-                    '<a class="nav-link" href="AboutUs.html" style="margin-right: 30px;">Sobre nos</a>'+
+                    '<a class="nav-link" href="AboutUs.html" style="margin-right: 30px;">Sobre nós</a>'+
                 '</li>'+
                 '<li class="nav-item dropdown active" style="margin-right:50px ;">'+
                   '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'+
@@ -55,7 +55,7 @@ $(document).ready(function(){
         '<div class="collapse navbar-collapse" id="navbarSupportedContent">'+
             '<ul class="navbar-nav me-auto mb-2 mb-lg-0">'+
                 '<li class="nav-item">'+
-                    '<a class="nav-link active" aria-current="page" href="#">Super Pets</a>'+
+                    '<a class="nav-link active" aria-current="page" href="index.html">Super Pets</a>'+
                 '</li>'+
             '</ul>'+
             '<ul class="navbar-nav">'+
@@ -66,7 +66,7 @@ $(document).ready(function(){
                     '<a class="nav-link" href="Comida.html" style="margin-right: 30px;">Comida</a>'+
                 '</li>'+
                 '<li class="nav-item">'+
-                    '<a class="nav-link" href="AboutUs.html" style="margin-right: 30px;">Sobre nos</a>'+
+                    '<a class="nav-link" href="AboutUs.html" style="margin-right: 30px;">Sobre nós</a>'+
                 '</li>'+
                 '<li class="nav-item">'+
                     '<a class="nav-link" href="Entrar.html" style="margin-right: 30px;">Entrar</a>'+
@@ -88,7 +88,7 @@ $(document).ready(function(){
         '<div class="collapse navbar-collapse" id="navbarSupportedContent">'+
             '<ul class="navbar-nav me-auto mb-2 mb-lg-0">'+
                 '<li class="nav-item">'+
-                    '<a class="nav-link " aria-current="page" href="#">Super Pets</a>'+
+                    '<a class="nav-link " aria-current="page" href="index.html">Super Pets</a>'+
                 '</li>'+
             '</ul>'+
             '<ul class="navbar-nav">'+
@@ -99,7 +99,7 @@ $(document).ready(function(){
                     '<a class="nav-link" href="Comida.html" style="margin-right: 30px;">Comida</a>'+
                 '</li>'+
                 '<li class="nav-item">'+
-                    '<a class="nav-link" href="AboutUs.html" style="margin-right: 30px;">Sobre nos</a>'+
+                    '<a class="nav-link" href="AboutUs.html" style="margin-right: 30px;">Sobre nós</a>'+
                 '</li>'+
                 '<li class="nav-item dropdown active" style="margin-right:50px ;">'+
                   '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'+
